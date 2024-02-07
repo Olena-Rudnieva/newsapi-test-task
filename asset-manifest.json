@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/newsapi-test-task/static/css/main.7acaea2f.css",
+    "main.js": "/newsapi-test-task/static/js/main.04a2ae52.js",
+    "index.html": "/newsapi-test-task/index.html",
+    "main.7acaea2f.css.map": "/newsapi-test-task/static/css/main.7acaea2f.css.map",
+    "main.04a2ae52.js.map": "/newsapi-test-task/static/js/main.04a2ae52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.04a2ae52.js"
+  ]
+}
