@@ -8,7 +8,7 @@ export const ButtonStyle = styled.button`
   font-weight: ${theme.fontWeight.medium};
   line-height: 1.43;
   background: ${theme.colors.dark};
-  padding: 15px 20px;
+  padding: 8px 20px;
   border-radius: 12px;
   border: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);

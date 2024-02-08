@@ -13,3 +13,9 @@ export const LoadingText = styled.p`
   line-height: 1.25;
   color: ${theme.colors.black};
 `;
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`;
