@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from 'components/Layout/Layout';
 
-const ArticlesPage = lazy(() => import('../pages/Articles/Articles'));
+const ArticlesPage = lazy(() => import('../pages/UserArticles/UserArticles'));
 const NewsApiArticlesPage = lazy(() =>
   import('../pages/NewsApiArticles/NewsApiArticles')
 );
