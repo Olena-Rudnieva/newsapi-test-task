@@ -18,14 +18,17 @@ export const fetchArticles = createAsyncThunk(
       //   const response = await axios.get(
       //     `everything?q=${searchQuery}&pageSize=${articlesAmount}&page=${page}&apiKey=${API_KEY}`
       //   );
-      const response = await client.get(`${proxyURL}everything`, {
-        params: {
-          q: searchQuery,
-          pageSize: articlesAmount,
-          page,
-          apiKey: API_KEY,
-        },
-      });
+      const response = await client.get(
+        `${proxyURL}https://newsapi.org/v2/everything`,
+        {
+          params: {
+            q: searchQuery,
+            pageSize: articlesAmount,
+            page,
+            apiKey: API_KEY,
+          },
+        }
+      );
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
