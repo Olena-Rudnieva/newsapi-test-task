@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  selectArticles,
-  //   selectError,
-  //   selectIsLoading,
-} from '../../redux/articles/articlesSelector';
+import { selectArticles } from '../../redux/articles/articlesSelector';
 import { fetchArticles } from '../../redux/articles/articlesOperations';
-// import { Loader } from 'components/Loader/Loader';
 import { ArticlesList } from 'components/ArticlesList/ArticlesList';
 import { Container } from 'components/Container/Container';
 import { Section } from './NewsApiArticles.styled';
@@ -18,8 +13,6 @@ const NewsApiArticles = () => {
   const [articlesAmount, setArticlesAmount] = useState(10);
   const dispatch = useDispatch();
   const articles = useSelector(selectArticles);
-  //   const isLoading = useSelector(selectIsLoading);
-  //   const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchArticles({ articlesAmount, page }));
@@ -34,9 +27,14 @@ const NewsApiArticles = () => {
     <Section>
       <Container>
         <Title name={'NewsAPI articles'} />
-        {/* {isLoading && !error && <Loader />} */}
         <ArticlesList articles={articles} />
-        <Button type={'button'} text={'Load more'} handleClick={handleClick} />
+        {articles.length > 0 && (
+          <Button
+            type={'button'}
+            text={'Load more'}
+            handleClick={handleClick}
+          />
+        )}
       </Container>
     </Section>
   );

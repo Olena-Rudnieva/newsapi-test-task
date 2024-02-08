@@ -1,19 +1,21 @@
 import { Container } from 'components/Container/Container';
 import { Section } from './UserArticles.styled';
 import { useSelector } from 'react-redux';
-import { selectArticles } from '../../redux/articles/articlesSelector';
+import {
+  selectError,
+  selectIsLoading,
+} from '../../redux/articles/articlesSelector';
 import { Title } from 'components/Title/Title';
 
 const UserArticles = () => {
-  const articles = useSelector(selectArticles);
-
-  console.log(articles);
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   return (
     <Section>
       <Container>
-        {/* {isLoading && !error && <Loader />} */}
         <Title name={'My articles'} />
+        {isLoading && !error && <b>Request in progress...</b>}
         {/* <ArticlesList articles={articles} /> */}
       </Container>
     </Section>
