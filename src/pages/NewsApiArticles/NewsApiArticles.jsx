@@ -11,6 +11,7 @@ import { ArticlesList } from 'components/ArticlesList/ArticlesList';
 import { Container } from 'components/Container/Container';
 import { Section } from './NewsApiArticles.styled';
 import { Button } from 'components/Button/Button';
+import { Title } from 'components/Title/Title';
 
 const NewsApiArticles = () => {
   const [page, setPage] = useState(1);
@@ -32,7 +33,8 @@ const NewsApiArticles = () => {
   return (
     <Section>
       <Container>
-        {isLoading && !error && <Loader />}
+        <Title name={'NewsAPI articles'} />
+        {/* {isLoading && !error && <Loader />} */}
         <ArticlesList articles={articles} />
         <Button type={'button'} text={'Load more'} handleClick={handleClick} />
       </Container>
