@@ -13,11 +13,22 @@ export const articlesSlice = createSlice({
     addArticle: (state, action) => {
       state.items.push(action.payload);
     },
-    // deleteArticle: (state, action) => {
-    //   state.favorites = state.items.filter(
-    //     item => item.id !== action.payload.id
-    //   );
-    // },
+    deleteArticle: (state, action) => {
+      state.items = state.items.filter(item => item.id !== action.payload);
+    },
+    togglePin: (state, action) => {
+      const { articleId, isPinned } = action.payload;
+
+      if (isPinned) {
+        state.pinnedArticle = articleId;
+        const index = state.items.findIndex(item => item.id === articleId);
+        const pinnedItem = state.items[index];
+        state.items.splice(index, 1);
+        state.items.unshift(pinnedItem);
+      } else {
+        state.pinnedArticle = '';
+      }
+    },
   },
 
   extraReducers: builder => {
@@ -38,5 +49,5 @@ export const articlesSlice = createSlice({
   },
 });
 
-export const { addArticle } = articlesSlice.actions;
+export const { addArticle, deleteArticle, togglePin } = articlesSlice.actions;
 export const articlesReducer = articlesSlice.reducer;

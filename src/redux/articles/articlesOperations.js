@@ -10,10 +10,6 @@ export const fetchArticles = createAsyncThunk(
   'articles/fetchArticles',
   async ({ articlesAmount, page }, thunkAPI) => {
     try {
-      //   const searchQuery = query || 'any';
-      //   const response = await axios.get(
-      //     `everything?q=${searchQuery}&pageSize=${articlesAmount}&page=${page}&apiKey=${API_KEY}`
-      //   );
       const response = await axios.get(`top-headlines`, {
         params: {
           country: 'us',

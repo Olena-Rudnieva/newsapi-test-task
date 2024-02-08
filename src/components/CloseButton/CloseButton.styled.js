@@ -20,7 +20,7 @@ export const CloseIcon = styled(IoMdClose)`
   scale: 1;
   stroke: ${theme.colors.black};
 
-  transition: scale ${theme.transition};
+  transition: stroke ${theme.transition}, scale ${theme.transition};
 
   &:hover,
   &:focus {

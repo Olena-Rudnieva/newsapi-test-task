@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { theme } from 'constants/theme';
 
 export const ArticlesItemWrapper = styled.li`
+  position: relative;
   width: 310px;
   border-radius: 15px;
-  padding: 10px;
+  padding: 50px 10px 10px 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
