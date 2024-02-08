@@ -7,10 +7,11 @@ axios.defaults.baseURL = `${BASE_URL}`;
 
 export const fetchArticles = createAsyncThunk(
   'articles/fetchArticles',
-  async ({ query, articlesAmount }, thunkAPI) => {
+  async ({ query, articlesAmount, page }, thunkAPI) => {
     try {
+      const searchQuery = query || 'any';
       const response = await axios.get(
-        `everything?q=${query}&pageSize=${articlesAmount}&apiKey=${API_KEY}`
+        `everything?q=${searchQuery}&pageSize=${articlesAmount}&page=${page}&apiKey=${API_KEY}`
       );
       return response.data;
     } catch (e) {

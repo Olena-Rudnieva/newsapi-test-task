@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from 'constants/theme';
 import { NavLink } from 'react-router-dom';
 
 export const HeaderWrapper = styled.header`
@@ -8,7 +9,7 @@ export const HeaderWrapper = styled.header`
   padding-top: 20px;
   padding-bottom: 20px;
   width: 100%;
-  background: linear-gradient(to bottom, #ffffff, #1976d2);
+  background: linear-gradient(to bottom, #ffffff, #9cb2c8);
 `;
 
 export const Nav = styled.nav`
@@ -20,10 +21,10 @@ export const StyledLink = styled(NavLink)`
   color: white;
   text-shadow: 2px 2px 10px #2d3e56;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: ${theme.fontWeight.regular};
   line-height: 1.1;
   &.active {
-    color: #0b44cd;
+    color: #1d2946;
   }
 
   @media (min-width: 375px) {
@@ -36,6 +37,6 @@ export const StyledLink = styled(NavLink)`
 
   @media (min-width: 1440px) {
     font-size: 30px;
-    font-weight: 600;
+    font-weight: ${theme.fontWeight.medium};
   }
 `;

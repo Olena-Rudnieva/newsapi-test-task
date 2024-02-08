@@ -6,15 +6,15 @@ export const ContainerWrapper = styled.div`
   margin-right: auto;
   padding: 0 15px;
 
-  @media (min-width: 375px) {
+  @media (min-width: 320px) {
     width: 375px;
   }
 
-  @media (min-width: 768px) {
-    width: 768px;
+  @media (min-width: 576px) {
+    width: 576px;
   }
 
-  @media (min-width: 1440px) {
-    width: 1214px;
+  @media (min-width: 992px) {
+    width: 992px;
   }
 `;

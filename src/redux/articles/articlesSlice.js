@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { fetchArticles } from './articlesOperations';
+import { fetchArticles } from './articlesOperations';
 
 export const articlesSlice = createSlice({
   name: 'articles',
   initialState: {
     items: [],
+    totalResults: null,
     pinnedArticle: '',
     isLoading: false,
-    error: null,
   },
   reducers: {
     addArticle: (state, action) => {
@@ -20,20 +20,22 @@ export const articlesSlice = createSlice({
     // },
   },
 
-  //   extraReducers: {
-  //     [fetchCars.pending](state) {
-  //       state.isLoading = true;
-  //     },
-  //     [fetchCars.fulfilled](state, action) {
-  //       state.isLoading = false;
-  //       state.error = null;
-  //       state.items = action.payload;
-  //     },
-  //     [fetchCars.rejected](state, action) {
-  //       state.isLoading = false;
-  //       state.error = action.payload;
-  //     },
-  //   },
+  extraReducers: builder => {
+    builder.addCase(fetchArticles.pending, state => {
+      state.isLoading = true;
+    });
+    builder.addCase(fetchArticles.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.error = null;
+      state.items = action.payload.articles;
+      state.totalResults = action.payload.totalPages;
+    });
+
+    builder.addCase(fetchArticles.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    });
+  },
 });
 
 export const { addArticle } = articlesSlice.actions;
