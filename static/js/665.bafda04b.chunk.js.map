@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/665.bafda04b.chunk.js","mappings":"2JAIA,UAJiB,WACf,OAAOA,EAAAA,EAAAA,KAAA,OAAAC,SAAK,eACd,C","sources":["pages/Articles/Articles.jsx"],"sourcesContent":["const Articles = () => {\n  return <div>My Articles</div>;\n};\n\nexport default Articles;\n"],"names":["_jsx","children"],"sourceRoot":""}
