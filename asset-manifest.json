@@ -1,20 +1,22 @@
 {
   "files": {
     "main.css": "/newsapi-test-task/static/css/main.193ea356.css",
-    "main.js": "/newsapi-test-task/static/js/main.82279a4f.js",
-    "static/js/760.4d0798a3.chunk.js": "/newsapi-test-task/static/js/760.4d0798a3.chunk.js",
-    "static/js/588.530a2635.chunk.js": "/newsapi-test-task/static/js/588.530a2635.chunk.js",
-    "static/js/42.9da65622.chunk.js": "/newsapi-test-task/static/js/42.9da65622.chunk.js",
+    "main.js": "/newsapi-test-task/static/js/main.b4ee60f9.js",
+    "static/js/760.f94537b7.chunk.js": "/newsapi-test-task/static/js/760.f94537b7.chunk.js",
+    "static/js/588.3e437a7a.chunk.js": "/newsapi-test-task/static/js/588.3e437a7a.chunk.js",
+    "static/js/757.9a1fedfb.chunk.js": "/newsapi-test-task/static/js/757.9a1fedfb.chunk.js",
+    "static/js/42.a5acd2c1.chunk.js": "/newsapi-test-task/static/js/42.a5acd2c1.chunk.js",
     "static/media/defaultImage.jpg": "/newsapi-test-task/static/media/defaultImage.2efe78cdf6dbf909f571.jpg",
     "index.html": "/newsapi-test-task/index.html",
     "main.193ea356.css.map": "/newsapi-test-task/static/css/main.193ea356.css.map",
-    "main.82279a4f.js.map": "/newsapi-test-task/static/js/main.82279a4f.js.map",
-    "760.4d0798a3.chunk.js.map": "/newsapi-test-task/static/js/760.4d0798a3.chunk.js.map",
-    "588.530a2635.chunk.js.map": "/newsapi-test-task/static/js/588.530a2635.chunk.js.map",
-    "42.9da65622.chunk.js.map": "/newsapi-test-task/static/js/42.9da65622.chunk.js.map"
+    "main.b4ee60f9.js.map": "/newsapi-test-task/static/js/main.b4ee60f9.js.map",
+    "760.f94537b7.chunk.js.map": "/newsapi-test-task/static/js/760.f94537b7.chunk.js.map",
+    "588.3e437a7a.chunk.js.map": "/newsapi-test-task/static/js/588.3e437a7a.chunk.js.map",
+    "757.9a1fedfb.chunk.js.map": "/newsapi-test-task/static/js/757.9a1fedfb.chunk.js.map",
+    "42.a5acd2c1.chunk.js.map": "/newsapi-test-task/static/js/42.a5acd2c1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.193ea356.css",
-    "static/js/main.82279a4f.js"
+    "static/js/main.b4ee60f9.js"
   ]
 }
