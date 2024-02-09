@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   ArticlesItemWrapper,
   Image,
@@ -30,4 +31,15 @@ export const ArticlesItem = ({ article, userButtons }) => {
       </Text>
     </ArticlesItemWrapper>
   );
+};
+
+ArticlesItem.propTypes = {
+  article: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    urlToImage: PropTypes.string,
+  }).isRequired,
+  userButtons: PropTypes.bool,
 };

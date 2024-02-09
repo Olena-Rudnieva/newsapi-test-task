@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { Backdrop, ModalWrapper } from './BasicModalWindow.styled';
@@ -35,4 +36,9 @@ export const BasicModalWindow = ({ children, handleModalToggle }) => {
     </Backdrop>,
     modalRoot
   );
+};
+
+BasicModalWindow.propTypes = {
+  children: PropTypes.node.isRequired,
+  handleModalToggle: PropTypes.func.isRequired,
 };

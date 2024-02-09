@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import {
   FormWrapper,
@@ -46,4 +47,12 @@ export const SearchField = ({ handleSearch }) => {
       )}
     </FormWrapper>
   );
+};
+
+SearchField.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+};
+
+SearchField.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
 };

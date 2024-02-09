@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Btn, CloseIcon } from './CloseButton.styled';
 
 export const CloseButton = ({ handleCloseModal }) => {
@@ -6,4 +7,8 @@ export const CloseButton = ({ handleCloseModal }) => {
       <CloseIcon />
     </Btn>
   );
+};
+
+CloseButton.propTypes = {
+  handleCloseModal: PropTypes.func.isRequired,
 };

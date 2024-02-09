@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ArticlesItem } from 'components/ArticlesItem/ArticlesItem';
 import { List } from './ArticlesList.styled';
 
@@ -9,4 +10,9 @@ export const ArticlesList = ({ articles, userButtons }) => {
       ))}
     </List>
   );
+};
+
+ArticlesList.propTypes = {
+  articles: PropTypes.arrayOf(PropTypes.object).isRequired,
+  userButtons: PropTypes.bool,
 };

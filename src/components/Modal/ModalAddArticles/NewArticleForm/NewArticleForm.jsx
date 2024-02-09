@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Formik, Field } from 'formik';
 import {
   ButtonWrapper,
@@ -87,4 +88,8 @@ export const NewArticleForm = ({ handleModalToggle }) => {
       )}
     </Formik>
   );
+};
+
+NewArticleForm.propTypes = {
+  handleModalToggle: PropTypes.func.isRequired,
 };

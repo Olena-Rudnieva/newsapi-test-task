@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
 import { DeleteBtn, DeleteIcon } from './DeleteButton.styled';
@@ -7,7 +8,6 @@ export const DeleteButton = ({ article }) => {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    console.log(article.id);
     dispatch(deleteArticle(article));
   };
 
@@ -16,4 +16,10 @@ export const DeleteButton = ({ article }) => {
       <DeleteIcon />
     </DeleteBtn>
   );
+};
+
+DeleteButton.propTypes = {
+  article: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+  }).isRequired,
 };
