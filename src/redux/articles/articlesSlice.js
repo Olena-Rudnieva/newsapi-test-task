@@ -10,11 +10,21 @@ export const articlesSlice = createSlice({
     isLoading: false,
   },
   reducers: {
+    // addArticle: (state, action) => {
+    //   state.items.push(action.payload);
+    // },
     addArticle: (state, action) => {
-      state.items.push(action.payload);
+      const newArticle = {
+        ...action.payload,
+        isUserAdded: true,
+      };
+      state.items.push(newArticle);
     },
     deleteArticle: (state, action) => {
-      state.items = state.items.filter(item => item.id !== action.payload);
+      const articleId = action.payload.id;
+      state.items = state.items.filter(
+        item => !(item.id === articleId && item.isUserAdded)
+      );
     },
     togglePin: (state, action) => {
       const { articleId, isPinned } = action.payload;

@@ -11,7 +11,7 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgba(18, 20, 23, 0.5);
-  z-index: 100;
+  z-index: 300;
 `;
 
 export const ModalWrapper = styled.div`

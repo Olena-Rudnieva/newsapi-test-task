@@ -9,7 +9,6 @@ export const DeleteBtn = styled.button`
   border: none;
   border-radius: 50%;
   background: transparent;
-  z-index: 200;
 `;
 
 export const DeleteIcon = styled(MdDeleteForever)`

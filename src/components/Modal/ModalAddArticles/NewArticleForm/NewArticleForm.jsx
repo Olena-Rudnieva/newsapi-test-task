@@ -30,6 +30,7 @@ export const NewArticleForm = ({ handleModalToggle }) => {
     };
 
     dispatch(addArticle(newArticle));
+    console.log(newArticle);
     actions.resetForm();
     handleModalToggle();
   };

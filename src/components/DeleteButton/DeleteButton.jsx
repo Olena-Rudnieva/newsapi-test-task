@@ -6,7 +6,10 @@ import { deleteArticle } from '../../redux/articles/articlesSlice';
 export const DeleteButton = ({ article }) => {
   const dispatch = useDispatch();
 
-  const handleDelete = () => dispatch(deleteArticle(article.id));
+  const handleDelete = () => {
+    console.log(article.id);
+    dispatch(deleteArticle(article));
+  };
 
   return (
     <DeleteBtn type="button" onClick={handleDelete}>
