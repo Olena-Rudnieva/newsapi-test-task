@@ -10,9 +10,6 @@ export const articlesSlice = createSlice({
     isLoading: false,
   },
   reducers: {
-    // addArticle: (state, action) => {
-    //   state.items.push(action.payload);
-    // },
     addArticle: (state, action) => {
       const newArticle = {
         ...action.payload,
