@@ -56,7 +56,7 @@ const UserArticles = () => {
             handleClick={handleModal}
           />
         </Wrapper>
-        <ArticlesList articles={filteredArticles()} />
+        <ArticlesList articles={filteredArticles()} userButtons={true} />
         {modal && (
           <BasicModalWindow handleModalToggle={handleModal}>
             <ModalAddArticles handleModalToggle={handleModal} />

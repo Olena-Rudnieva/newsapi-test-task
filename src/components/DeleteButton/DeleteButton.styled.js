@@ -15,7 +15,7 @@ export const DeleteBtn = styled.button`
 export const DeleteIcon = styled(MdDeleteForever)`
   width: 28px;
   height: 28px;
-  /* fill: ${theme.colors.black}; */
+  fill: ${theme.colors.black};
   stroke: white;
 
   transition: scale ${theme.transition};

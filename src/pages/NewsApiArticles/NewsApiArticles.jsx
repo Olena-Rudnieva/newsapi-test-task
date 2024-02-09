@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectArticles } from '../../redux/articles/articlesSelector';
+import {
+  selectArticles,
+  selectTotalResults,
+} from '../../redux/articles/articlesSelector';
 import { fetchArticles } from '../../redux/articles/articlesOperations';
 import { ArticlesList } from 'components/ArticlesList/ArticlesList';
 import { Container } from 'components/Container/Container';
@@ -13,6 +16,7 @@ const NewsApiArticles = () => {
   const [articlesAmount, setArticlesAmount] = useState(10);
   const dispatch = useDispatch();
   const articles = useSelector(selectArticles);
+  const totalResults = useSelector(selectTotalResults);
 
   useEffect(() => {
     dispatch(fetchArticles({ articlesAmount, page }));
@@ -28,7 +32,7 @@ const NewsApiArticles = () => {
       <Container>
         <Title name={'NewsAPI articles'} />
         <ArticlesList articles={articles} />
-        {articles.length > 0 && (
+        {articles?.length > 0 && articles?.length < totalResults && (
           <Button
             type={'button'}
             text={'Load more'}

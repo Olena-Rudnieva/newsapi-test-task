@@ -1,47 +1,36 @@
-import { BsPinAngle } from 'react-icons/bs';
+import { PiPushPinLight, PiPushPinFill } from 'react-icons/pi';
 import styled from 'styled-components';
 import { theme } from 'constants/theme';
 
 export const Pin = styled.button`
   position: absolute;
   top: 20px;
-  right: 40px;
+  right: 50px;
   border: none;
   background: transparent;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   padding: 0;
 `;
 
-export const IconEmpty = styled.svg`
-  width: 100%;
-  height: 100%;
-  stroke: ${theme.colors.black};
-  fill: transparent;
-  transition: transform ${theme.transition};
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-export const IconFilled = styled.svg`
+export const IconEmpty = styled(PiPushPinLight)`
   width: 100%;
   height: 100%;
   fill: ${theme.colors.black};
-  stroke: ${theme.colors.black};
+  transition: transform ${theme.transition};
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
-export const PinnedIcon = styled(BsPinAngle)`
-  width: 28px;
-  height: 28px;
-  /* fill: ${theme.colors.black};
-  stroke: white;
+export const IconFilled = styled(PiPushPinFill)`
+  width: 100%;
+  height: 100%;
+  fill: ${theme.colors.black};
+  transition: transform ${theme.transition};
 
-  transition: scale ${theme.transition};
-
-  &:hover,
-  &:focus {
-    scale: 1.2;
-  } */
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

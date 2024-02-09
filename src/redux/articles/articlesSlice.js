@@ -5,7 +5,7 @@ export const articlesSlice = createSlice({
   name: 'articles',
   initialState: {
     items: [],
-    totalResults: null,
+    totalResults: 0,
     pinnedArticle: '',
     isLoading: false,
   },
@@ -39,7 +39,7 @@ export const articlesSlice = createSlice({
       state.isLoading = false;
       state.error = null;
       state.items = action.payload.articles;
-      state.totalResults = action.payload.totalPages;
+      state.totalResults = action.payload.totalResults;
     });
 
     builder.addCase(fetchArticles.rejected, (state, action) => {

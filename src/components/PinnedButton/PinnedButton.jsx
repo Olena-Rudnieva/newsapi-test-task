@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPinnedArticle } from '../../redux/articles/articlesSelector';
-import { IconEmpty, IconFilled, Pin, PinnedIcon } from './PinnedButton.styled';
+import { IconEmpty, IconFilled, Pin } from './PinnedButton.styled';
 import { togglePin } from '../../redux/articles/articlesSlice';
 
 export const PinnedButton = ({ article }) => {
@@ -14,15 +14,7 @@ export const PinnedButton = ({ article }) => {
 
   return (
     <Pin type="button" onClick={handleTogglePin}>
-      {article.id === pinnedArticle ? (
-        <IconFilled>
-          <PinnedIcon />
-        </IconFilled>
-      ) : (
-        <IconEmpty>
-          <PinnedIcon />
-        </IconEmpty>
-      )}
+      {article.id === pinnedArticle ? <IconFilled /> : <IconEmpty />}
     </Pin>
   );
 };
