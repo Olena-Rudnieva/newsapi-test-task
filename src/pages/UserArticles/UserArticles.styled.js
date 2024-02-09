@@ -16,6 +16,12 @@ export const LoadingText = styled.p`
 
 export const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  align-items: baseline;
+
+  ${theme.mq.tablet} {
+    flex-direction: row;
+    align-items: baseline;
+  }
 `;

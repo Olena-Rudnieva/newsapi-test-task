@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { theme } from 'constants/theme';
 
 export const Wrapper = styled.div`
-  padding: 40px;
-  width: 400px;
+  padding: 40px 20px;
+  width: 280px;
 
-  @media (min-width: 768px) {
+  ${theme.mq.tablet} {
     padding: 40px;
     width: 549px;
   }

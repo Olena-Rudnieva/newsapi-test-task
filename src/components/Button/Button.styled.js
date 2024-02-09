@@ -11,7 +11,7 @@ export const ButtonStyle = styled.button`
   padding: 8px 20px;
   border-radius: 12px;
   border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: ${theme.boxShadow.article};
   transition: background 300ms ${theme.transition};
 
   &:hover,

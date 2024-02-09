@@ -1,5 +1,5 @@
+import { theme } from 'constants/theme';
 import styled from 'styled-components';
-import { AiOutlineEyeInvisible, AiOutlineEye } from 'react-icons/ai';
 
 export const FormWrapper = styled.div`
   margin-bottom: 40px;
@@ -13,7 +13,7 @@ export const InputWrapper = styled.div`
 
   label {
     font-size: 16px;
-    color: var(--black);
+    color: ${theme.colors.black};
     font-weight: 400;
     line-height: 1.375;
   }
@@ -22,7 +22,7 @@ export const InputWrapper = styled.div`
     width: 100%;
     padding: 16px 18px;
     font-size: 16px;
-    color: var(--black);
+    color: ${theme.colors.black};
     font-weight: 400;
     line-height: 1.375;
     border: 1px solid rgba(18, 20, 23, 0.1);
@@ -32,14 +32,13 @@ export const InputWrapper = styled.div`
     transition: border-color 0.3s;
 
     &:focus {
-      border-color: var(--olive);
+      border-color: ${theme.colors.grey};
     }
   }
 `;
 
 export const ButtonWrapper = styled.div`
   display: inline-block;
-  margin-bottom: 64px;
 `;
 
 export const ErrorText = styled.div`
@@ -48,22 +47,4 @@ export const ErrorText = styled.div`
   font-weight: 400;
   line-height: 1.142;
   margin-top: 4px;
-`;
-
-export const EyeIconInvisible = styled(AiOutlineEyeInvisible)`
-  position: absolute;
-  top: 27px;
-  right: 18px;
-  width: 20px;
-  height: 20px;
-  transform: translateY(-50%);
-`;
-
-export const EyeIconVisible = styled(AiOutlineEye)`
-  position: absolute;
-  top: 27px;
-  right: 18px;
-  width: 20px;
-  height: 20px;
-  transform: translateY(-50%);
 `;

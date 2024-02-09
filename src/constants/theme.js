@@ -6,7 +6,6 @@ export const theme = {
     black: '#1d2946',
     secondBlack: 'rgba(18, 20, 23, 0.5)',
     accent: '#0b44cd',
-    blue: '#3470ff',
     grey: '#99a6b2',
     dark: '#1d2946',
   },
@@ -49,8 +48,7 @@ export const theme = {
   },
 
   boxShadow: {
-    card: '7px 4px 14px rgba(49, 21, 4, 0.07)',
-    friends: '7px 4px 14px rgba(0, 0, 0, 0.11)',
-    notice: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+    image: '7px 4px 14px rgba(49, 21, 4, 0.07)',
+    article: '0px 4px 4px rgba(0, 0, 0, 0.25)',
   },
 };

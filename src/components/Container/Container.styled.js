@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { theme } from 'constants/theme';
 
 export const ContainerWrapper = styled.div`
   width: 100vw;
@@ -6,15 +7,10 @@ export const ContainerWrapper = styled.div`
   margin-right: auto;
   padding: 0 15px;
 
-  @media (min-width: 320px) {
-    width: 375px;
-  }
-
-  @media (min-width: 576px) {
+  ${theme.mq.tablet} {
     width: 576px;
   }
-
-  @media (min-width: 992px) {
+  ${theme.mq.desktop} {
     width: 992px;
   }
 `;
