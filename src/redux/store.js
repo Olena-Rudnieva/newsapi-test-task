@@ -13,7 +13,7 @@ import storage from 'redux-persist/lib/storage';
 import { articlesReducer } from './articles/articlesSlice';
 
 const articlesPersistConfig = {
-  key: 'pinnedArticle',
+  key: 'articles',
   storage,
   whitelist: ['pinnedArticle'],
 };
